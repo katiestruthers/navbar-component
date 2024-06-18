@@ -7,25 +7,23 @@ type NavProps = {
 
 export const NavBar = (props: NavProps) => {
   return (
-    <nav className="flex"> 
-      <a href="#">Abstractly</a>
-      <ul className="flex">
+    <header className="flex"> 
+      <h1>Abstractly</h1>
+      <nav className="flex">
         {props.titles.map((title) => {
           return (
-            <li>
-              <a href="#">
-                <button className="" type="button">{title}</button>
-              </a>
-            </li>
+            <a href="#">
+              <button className="" type="button">{title}</button>
+            </a>
           )   
         })}
-      </ul>
+      </nav>
       <a href="#">
           <button className="" type="button">Learn more</button>
       </a>
       <a href="#">
           <button className="" type="button">See pricing</button>
         </a>
-    </nav>
+    </header>
   );
 };
