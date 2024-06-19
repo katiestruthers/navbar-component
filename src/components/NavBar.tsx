@@ -5,7 +5,7 @@ import { NavProps } from "../types";
 
 export const NavBar = (props: NavProps) => {
   return (
-    <header className="flex w-screen justify-between items-center px-28 pt-4"> 
+    <header className="flex w-screen justify-between items-center px-28 pt-4 max-lg:px-12 max-md:px-8 max-sm:px-4"> 
       <img src={logo} alt="Abstractly logo" className="py-2.5"></img>
       <nav className="flex gap-8 max-lg:hidden">
         {props.titles.map((title) => {
