@@ -17,10 +17,10 @@ const StyledMobileMenu = styled.div<{ isMobileMenuOpen: boolean; }>`
 
 export const MobileMenu = (props: NavProps) => {
   return (
-  <StyledMobileMenu isMobileMenuOpen={props.isMobileMenuOpen} className="lg:hidden py-4 flex flex-col gap-6 px-12 max-md:px-8 max-sm:px-4">
+  <StyledMobileMenu isMobileMenuOpen={props.isMobileMenuOpen} className="py-4 flex flex-col gap-6 px-12 max-md:px-8 max-sm:px-4">
     <header className="flex justify-between">
       <img src={logo} alt="Abstractly logo" className="py-2.5"></img>
-      <button aria-label="Close mobile menu" className="lg:hidden" onClick={props.handleClick}>
+      <button aria-label="Close mobile menu" onClick={props.handleClick}>
         <span aria-hidden="true" className="text-2xl text-neutral-600">×</span>
       </button>
     </header>
@@ -33,7 +33,7 @@ export const MobileMenu = (props: NavProps) => {
         )   
       })}
     </nav>
-    <div className="flex flex-col gap-4 lg:hidden">
+    <div className="flex flex-col gap-4">
       <a href="#">
         <button className="text-neutral-900 text-base font-medium bg-white px-4 py-2.5 rounded shadow block w-full" type="button">Learn more</button>
       </a>
