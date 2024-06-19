@@ -1,7 +1,7 @@
 {
   "name": "react-typescript",
   "version": "0.1.0",
-  "homepage": "https://katiestruthers.github.io/blog-card/",
+  "homepage": "https://katiestruthers.github.io/navbar-component/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
