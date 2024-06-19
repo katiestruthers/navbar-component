@@ -1,16 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
-import { useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import logo from "../img/abstractly.svg";
-import { SlideoutMenu } from "./SlideoutMenu";
 
 type NavProps = {
-  titles: string[]
+  titles: string[],
+  isMobileMenuOpen: boolean,
+  setMobileMenu: Dispatch<SetStateAction<boolean>>
 }
 
 export const NavBar = (props: NavProps) => {
-  const [activeSlideout, setActiveSlideout] = useState(false);
-
   return (
     <header className="flex w-screen justify-between items-center px-28 pt-4"> 
       <img src={logo} alt="Abstractly logo" className="py-2.5"></img>
@@ -32,10 +31,9 @@ export const NavBar = (props: NavProps) => {
         </a>
       </div>
       
-      <button aria-label="Open mobile menu" className="lg:hidden" onClick={() => { setActiveSlideout(!activeSlideout) }}>
-        <span aria-hidden="true" className="">☰</span>
+      <button aria-label="Open mobile menu" className="lg:hidden" onClick={() => { props.setMobileMenu(!props.isMobileMenuOpen) }}>
+        <span aria-hidden="true" className="text-2xl text-neutral-600">☰</span>
       </button>
-      <SlideoutMenu open={activeSlideout} titles={props.titles} />
     </header>
   );
 };
