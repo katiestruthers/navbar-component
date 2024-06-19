@@ -2,13 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import styled from "styled-components";
 import logo from "../img/abstractly.svg";
-import { Dispatch, SetStateAction } from "react";
-
-type MobileMenuProps = {
-  titles: string[],
-  isMobileMenuOpen: boolean,
-  setMobileMenu: Dispatch<SetStateAction<boolean>>
-}
+import { NavProps } from "../types";
 
 const StyledMobileMenu = styled.div<{ isMobileMenuOpen: boolean; }>`
   position: fixed;
@@ -21,12 +15,12 @@ const StyledMobileMenu = styled.div<{ isMobileMenuOpen: boolean; }>`
   background-color: white;
 `;
 
-export const MobileMenu = (props: MobileMenuProps) => {
+export const MobileMenu = (props: NavProps) => {
   return (
   <StyledMobileMenu isMobileMenuOpen={props.isMobileMenuOpen} className="lg:hidden px-28 py-4 flex flex-col gap-6">
     <header className="flex justify-between">
       <img src={logo} alt="Abstractly logo" className="py-2.5"></img>
-      <button aria-label="Close mobile menu" className="lg:hidden" onClick={() => { props.setMobileMenu(!props.isMobileMenuOpen) }}>
+      <button aria-label="Close mobile menu" className="lg:hidden" onClick={props.handleClick}>
         <span aria-hidden="true" className="text-2xl text-neutral-600">×</span>
       </button>
     </header>

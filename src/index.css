@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+:root {
+  background: linear-gradient(to bottom right, #F9FAFB, #D2D6DB);
+}
+
 body {
   margin: 0;
   font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
@@ -12,8 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-
-  background: linear-gradient(to bottom right, #F9FAFB, #D2D6DB);
+  
   display: flex;
   justify-content: center;
 }

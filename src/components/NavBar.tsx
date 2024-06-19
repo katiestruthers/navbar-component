@@ -1,13 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
-import { Dispatch, SetStateAction } from "react";
 import logo from "../img/abstractly.svg";
-
-type NavProps = {
-  titles: string[],
-  isMobileMenuOpen: boolean,
-  setMobileMenu: Dispatch<SetStateAction<boolean>>
-}
+import { NavProps } from "../types";
 
 export const NavBar = (props: NavProps) => {
   return (
@@ -31,7 +25,7 @@ export const NavBar = (props: NavProps) => {
         </a>
       </div>
       
-      <button aria-label="Open mobile menu" className="lg:hidden" onClick={() => { props.setMobileMenu(!props.isMobileMenuOpen) }}>
+      <button aria-label="Open mobile menu" className="lg:hidden" onClick={props.handleClick}>
         <span aria-hidden="true" className="text-2xl text-neutral-600">☰</span>
       </button>
     </header>
