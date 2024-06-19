@@ -11,3 +11,16 @@
   color: #000;
   font-weight: bold;
 }
+
+.blue-button:focus, .white-button:focus {
+  outline: 4px solid #E9EAFD;
+  border-radius: 4px;
+}
+
+.blue-button:hover, .blue-button:focus {
+  background-color: #3730A3;
+}
+
+.white-button:hover, .white-button:focus {
+  background-color: #FAFAFA;
+}

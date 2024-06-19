@@ -18,14 +18,14 @@ export const NavBar = (props: NavProps) => {
       </nav>
       <div className="flex gap-4 max-lg:hidden">
         <a href="#">
-          <button className="text-neutral-900 text-base font-medium bg-white px-4 py-2.5 rounded shadow" type="button">Learn more</button>
+          <button className="text-neutral-900 text-base font-medium bg-white px-4 py-2.5 rounded shadow white-button" type="button">Learn more</button>
         </a>
         <a href="#">
-          <button className="text-white text-base font-medium bg-indigo-700 px-4 py-2.5 rounded shadow" type="button">See pricing</button>
+          <button className="text-white text-base font-medium bg-indigo-700 px-4 py-2.5 rounded shadow blue-button" type="button">See pricing</button>
         </a>
       </div>
       
-      <button aria-label="Open mobile menu" className="lg:hidden" onClick={props.handleClick}>
+      <button aria-label="Open mobile menu" className="lg:hidden w-5 h-5" onClick={props.handleClick}>
         <span aria-hidden="true" className="text-2xl text-neutral-600">☰</span>
       </button>
     </header>
